@@ -305,7 +305,7 @@ if __name__ == '__main__':
                             temp1 = {'name': info.name, 'alias': info.alpha3, 'points': value, 'continent':match['continent']}
                             new_dict.append(temp1)
         newlist = sorted(new_dict, key=lambda k: k['points'], reverse=True)
-        newlist = newlist[:80]
+        newlist = newlist[:100]
         data_state_1999[state] = newlist
 
     for state, val in data_2000.iteritems():
@@ -320,7 +320,7 @@ if __name__ == '__main__':
                             temp1 = {'name': info.name, 'alias': info.alpha3, 'points': value, 'continent':match['continent']}
                             new_dict.append(temp1)
         newlist = sorted(new_dict, key=lambda k: k['points'], reverse=True)
-        newlist = newlist[:80]
+        newlist = newlist[:100]
         data_state_2000[state] = newlist
 
     app.run()
