@@ -226,12 +226,12 @@ h1, h2, h3, h4, h5, h6 {
  left: 0;
  top: 0;
 }
-  circle.NorthAmerica { fill: #f3797f; }
+circle.NorthAmerica { fill: #f3797f; }
   circle.SouthAmerica { fill: #80a1b6; }
-  circle.Europe { fill: #9fad9e; }
-  circle.Asia { fill: #9c8c9f; }
+  circle.Europe { fill: #e085e9; }
+  circle.Asia { fill: #16b59f; }
   circle.Africa { fill: #fab585; }
-  circle.Oceania { fill: #b28d69; }
+  circle.Oceania { fill: #c0e25e; }
   text {
     fill: #555;
     font-family: sans-serif;
