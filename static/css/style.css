@@ -1,0 +1,305 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800|Roboto+Slab:400,100,300,700);
+body {
+    /*Contains default information that applies through the body of the page*/
+    font-family: "Roboto Slab", sans-serif;
+    font-weight: 300;
+    font-size: 1.5em;
+    position: relative;
+    /*background-image: url('../img/img.png');*/
+    padding-top: 60px;
+}
+text {
+  font: 12px "Roboto Slab", Helvetica, Arial, sans-serif;
+  text-anchor: middle;
+  pointer-events: none;
+}
+
+circle {
+  fill: #ccc;
+}
+
+.node:hover circle {
+  fill: orange;
+}
+#information{
+    height:120px !important;
+    overflow: scroll;
+    color:#616161;
+    border: 3px solid white;
+    background-color: white;
+
+}
+
+#name{
+    color:white;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+
+#info {
+    color:#616161;
+    table-layout: fixed;
+
+}
+
+#code{
+    text-align: center;
+    vertical-align: middle;
+}
+
+td {
+    text-align: center;
+    font-size: 0.7em;
+    color:#616161;
+    vertical-align: middle;
+}
+th{
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.top{
+    text-align: center;
+    vertical-align: middle;
+    color : white;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.navbar-default {
+    background-color: #F8F8A1;
+    border-color: #E7E7E7;
+}
+#top {
+    background-color: rgb(4, 36, 61);
+    color: white;
+}
+
+.container .header{
+    vertical-align: middle;
+    height : 10px;
+}
+
+#treeview-selectable{
+    padding-top: 50px;
+    font-size: 14px;
+}
+
+iframe {
+    height: 500px;
+    background-color: white;
+    border-color: transparent;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Roboto Slab", sans-serif;
+    font-weight: bold;
+    margin: 0;
+}
+
+#top{
+    height: 50px;
+    font-size: 25px;
+}
+
+#heading{
+    position: relative;
+    vertical-align: middle;
+}
+
+.d3-slider {
+    position: relative;
+    font-family: Verdana,Arial,sans-serif;
+    font-size: 1.1em;
+    border: 1px solid #aaaaaa;
+    z-index: 2;
+}
+
+.d3-slider-horizontal {
+    height: .8em;
+}
+
+.d3-slider-range {
+  background:#2980b9;
+  left:0px;
+  right:0px;
+  height: 0.8em;
+  position: absolute;
+}
+
+.d3-slider-range-vertical {
+  background:#2980b9;
+  left:0px;
+  right:0px;
+  position: absolute;
+  top:0;
+}
+
+.d3-slider-vertical {
+    width: .8em;
+    height: 100px;
+}
+
+.d3-slider-handle {
+    position: absolute;
+    width: 1.2em;
+    height: 1.2em;
+    border: 1px solid #d3d3d3;
+    border-radius: 4px;
+    background: #eee;
+    background: linear-gradient(to bottom, #eee 0%, #ddd 100%);
+    z-index: 3;
+}
+
+.d3-slider-handle:hover {
+    border: 1px solid #999999;
+}
+
+.d3-slider-horizontal .d3-slider-handle {
+    top: -.3em;
+    margin-left: -.6em;
+}
+
+.d3-slider-axis {
+    position: relative;
+    z-index: 1;
+}
+
+.d3-slider-axis-bottom {
+    top: .8em;
+}
+
+.d3-slider-axis-right {
+    left: .8em;
+}
+
+.d3-slider-axis path {
+    stroke-width: 0;
+    fill: none;
+}
+
+.d3-slider-axis line {
+    fill: none;
+    stroke: #aaa;
+    shape-rendering: crispEdges;
+}
+
+.d3-slider-axis text {
+    font-size: 11px;
+}
+
+.d3-slider-vertical .d3-slider-handle {
+    left: -.25em;
+    margin-left: 0;
+    margin-bottom: -.6em;
+}
+
+  circle {
+    stroke-width: 1;
+    stroke: #555;
+  }
+  .scaling-svg-container {
+ position: relative;
+ height: 0;
+ width: 100%;
+ padding: 0;
+ padding-bottom: 100%;
+ /* override this inline for aspect ratio other than square */
+}
+.scaling-svg {
+ position: absolute;
+ height: 100%;
+ width: 100%;
+ left: 0;
+ top: 0;
+}
+  circle.NorthAmerica { fill: #f3797f; }
+  circle.SouthAmerica { fill: #80a1b6; }
+  circle.Europe { fill: #9fad9e; }
+  circle.Asia { fill: #9c8c9f; }
+  circle.Africa { fill: #fab585; }
+  circle.Oceania { fill: #b28d69; }
+  text {
+    fill: #555;
+    font-family: sans-serif;
+    font-size: 9;
+    pointer-events: none;
+    text-anchor: middle;
+  }
+  .state{
+		fill: none;
+		stroke: #a9a9a9;
+		stroke-width: 1;
+	}
+	.state:hover{
+		fill-opacity:0.5;
+	}
+	#tooltip {
+		position: absolute;
+		text-align: center;
+		padding: 20px;
+		margin: 10px;
+		font: 12px sans-serif;
+		background: lightsteelblue;
+		border: 1px;
+		border-radius: 2px;
+		pointer-events: none;
+	}
+	#tooltip h4{
+		margin:0;
+		font-size:14px;
+	}
+	#tooltip{
+		background:rgba(0,0,0,0.9);
+		border:1px solid grey;
+		border-radius:5px;
+		font-size:12px;
+		width:auto;
+		padding:4px;
+		color:white;
+		opacity:0;
+	}
+	#tooltip table{
+		table-layout:fixed;
+	}
+	#tooltip tr td{
+		padding:0;
+		margin:0;
+	}
+	#tooltip tr td:nth-child(1){
+		width:50px;
+	}
+	#tooltip tr td:nth-child(2){
+		text-align:center;
+	}
+
+    .tipsy { font-size: 10px; position: absolute; padding: 5px; z-index: 100000; }
+  .tipsy-inner { background-color: #000; color: #FFF; max-width: 200px; padding: 5px 8px 4px 8px; text-align: center; }
+
+  /* Rounded corners */
+  .tipsy-inner { border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; }
+
+  /* Uncomment for shadow */
+  /*.tipsy-inner { box-shadow: 0 0 5px #000000; -webkit-box-shadow: 0 0 5px #000000; -moz-box-shadow: 0 0 5px #000000; }*/
+
+  .tipsy-arrow { position: absolute; width: 0; height: 0; line-height: 0; border: 5px dashed #000; }
+
+  /* Rules to colour arrows */
+  .tipsy-arrow-n { border-bottom-color: #000; }
+  .tipsy-arrow-s { border-top-color: #000; }
+  .tipsy-arrow-e { border-left-color: #000; }
+  .tipsy-arrow-w { border-right-color: #000; }
+
+	.tipsy-n .tipsy-arrow { top: 0px; left: 50%; margin-left: -5px; border-bottom-style: solid; border-top: none; border-left-color: transparent; border-right-color: transparent; }
+    .tipsy-nw .tipsy-arrow { top: 0; left: 10px; border-bottom-style: solid; border-top: none; border-left-color: transparent; border-right-color: transparent;}
+    .tipsy-ne .tipsy-arrow { top: 0; right: 10px; border-bottom-style: solid; border-top: none;  border-left-color: transparent; border-right-color: transparent;}
+  .tipsy-s .tipsy-arrow { bottom: 0; left: 50%; margin-left: -5px; border-top-style: solid; border-bottom: none;  border-left-color: transparent; border-right-color: transparent; }
+    .tipsy-sw .tipsy-arrow { bottom: 0; left: 10px; border-top-style: solid; border-bottom: none;  border-left-color: transparent; border-right-color: transparent; }
+    .tipsy-se .tipsy-arrow { bottom: 0; right: 10px; border-top-style: solid; border-bottom: none; border-left-color: transparent; border-right-color: transparent; }
+  .tipsy-e .tipsy-arrow { right: 0; top: 50%; margin-top: -5px; border-left-style: solid; border-right: none; border-top-color: transparent; border-bottom-color: transparent; }
+  .tipsy-w .tipsy-arrow { left: 0; top: 50%; margin-top: -5px; border-right-style: solid; border-left: none;

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+      <link rel="stylesheet" href="static/css/style.css">
+<link rel="stylesheet" href="http://rawgithub.com/Caged/d3-tip/master/examples/example-styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+       <link rel="stylesheet" href="static/bootstrap-treeview/src/css/bootstrap-treeview.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+      <script type="text/javascript" src="static/prefixfree/prefixfree.min.js"></script> <!-- taking care of browser prefixes -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+      <script src="static/bootstrap-treeview/src/js/bootstrap-treeview.js"></script>
+      <script src="static/js/menu.js"></script>
+      <script src="static/js/tipsy.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="http://mbostock.github.com/d3/d3.v2.min.js"></script>
+        <script type="text/javascript" src="static/js/slider.js"></script>
+        <script type="text/javascript" src="static/js/tipindex.js"></script>
+          <nav id="navigator" class="navbar navbar-default navbar-fixed-top" role="navigation">
+         <div id = "top">
+            <div  class="container header">
+               <div  class="navbar header">
+                  <span id = "heading"><span class="glyphicon glyphicon-chevron-left"></span>Immigration<span class="glyphicon glyphicon-chevron-right"></span></span>
+               </div>
+               <!-- navbar header -->
+            </div>
+            <!--container header -->
+         </div>
+          <!--top -->
+      </nav> <!-- navbar navbar-default navbar-fixed-top  -->
+
+</head>
+<body>
+    <div class="container">
+        <div class ="row">
+                <div id="slider3"></div>
+        </div>
+        <div class="row">
+
+            <div class="col-md-4">
+
+                <div id="treeview-selectable"></div>
+            </div>
+            <div class="col-md-8">
+                <div id="map"></div>
+            </div>
+        </div>
+        <!--<div class="row">-->
+            <!--<div class="col-md-6">-->
+                <!--<svg class="scaling-svg-container" viewBox="0 0 960 600" id="statesvg"></svg> &lt;!&ndash; svg to hold the map. &ndash;&gt;-->
+            <!--</div>-->
+        <!--</div>-->
+    </div>
+
+    <script type="text/javascript">
+    $( document ).ready(function() {
+//      init({{temp|safe}}, {{min|safe}}, {{max|safe}});
+      menu();
+
+    });
+    </script>
+    <!--<script>-->
+        <!--function tooltipHtml(n, d){	/* function to create html content string in tooltip div. */-->
+            <!--return "<h4>"+n+"</h4><table>"+-->
+                <!--"<tr><td>Low</td><td>"+(d.low)+"</td></tr>"+-->
+                <!--"<tr><td>Average</td><td>"+(d.avg)+"</td></tr>"+-->
+                <!--"<tr><td>High</td><td>"+(d.high)+"</td></tr>"+-->
+                <!--"</table>";-->
+        <!--}-->
+
+        <!--var sampleData ={};	/* Sample random data. */-->
+        <!--["HI", "AK", "FL", "SC", "GA", "AL", "NC", "TN", "RI", "CT", "MA",-->
+        <!--"ME", "NH", "VT", "NY", "NJ", "PA", "DE", "MD", "WV", "KY", "OH",-->
+        <!--"MI", "WY", "MT", "ID", "WA", "DC", "TX", "CA", "AZ", "NV", "UT",-->
+        <!--"CO", "NM", "OR", "ND", "SD", "NE", "IA", "MS", "IN", "IL", "MN",-->
+        <!--"WI", "MO", "AR", "OK", "KS", "LS", "VA"]-->
+            <!--.forEach(function(d){-->
+                <!--var low=Math.round(100*Math.random()),-->
+                    <!--mid=Math.round(100*Math.random()),-->
+                    <!--high=Math.round(100*Math.random());-->
+                <!--sampleData[d]={low:d3.min([low,mid,high]), high:d3.max([low,mid,high]),-->
+                        <!--avg:Math.round((low+mid+high)/3), color:d3.interpolate("#ffffcc", "#800026")(low/100)};-->
+            <!--});-->
+
+        <!--/* draw states on id #statesvg */-->
+        <!--uStates.draw("#map", sampleData, tooltipHtml);-->
+    <!--</script>-->
+
+</body>
+</html>
