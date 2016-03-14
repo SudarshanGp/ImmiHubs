@@ -9,112 +9,112 @@ function menu() {
     var states = [{
         text: "Northeast",
         nodes: [{
+               text: "Connecticut" 
+            }, {
                 text: "Maine"
-            }, {
-                text: "New York"
-            }, {
-                text: "New Hampshire"
-            }, {
-                text: "Pennsylvania"
-            }, {
-                text: "Vermont"
-            }, {
-                text: "New Jersey"
             }, {
                 text: "Massachusetts"
             }, {
+                text: "New Hampshire"
+            }, {
+                text: "New Jersey"
+            }, {
+                text: "New York"
+            }, {
+                text: "Pennsylvania"
+            }, {
                 text: "Rhode Island"
             }, {
-                text: "Connecticut"
+                text: "Vermont"
             }
 
         ]
     }, {
         text: "Midwest",
         nodes: [{
-                text: "Wisconsin"
-            }, {
-                text: "North Dakota"
-            }, {
-                text: "Michigan"
-            }, {
-                text: "South Dakota"
-            }, {
                 text: "Illinois"
-            }, {
-                text: "Nebraska"
             }, {
                 text: "Indiana"
             }, {
+                text: "Iowa"
+            }, {
                 text: "Kansas"
             }, {
-                text: "Ohio"
+                text: "Michigan"
             }, {
                 text: "Minnesota"
             }, {
-                text: "Iowa"
+                text: "Nebraska"
+            }, {
+                text: "North Dakota"
+            }, {
+                text: "Ohio"
+            }, {
+                text: "South Dakota"
+            }, {
+                text: "Wisconsin"
             }
 
         ]
     }, {
         text: "South",
         nodes: [{
+                text: "Alabama"
+            }, {
+                text: "Arkansas"
+            }, {
                 text: "Delaware"
+            }, {
+                text: "Florida"
+            }, {
+                text: "Georgia"
             }, {
                 text: "Kentucky"
             }, {
                 text: "Maryland"
             }, {
-                text: "Tennessee"
-            }, {
                 text: "Mississippi"
-            }, {
-                text: "Virginia"
-            }, {
-                text: "Alabama"
-            }, {
-                text: "West Virginia"
             }, {
                 text: "North Carolina"
             }, {
-                text: "South Carolina"
-            }, {
                 text: "Oklahoma"
             }, {
-                text: "Georgia"
+                text: "South Carolina"
+            }, {
+                text: "Tennessee"
             }, {
                 text: "Texas"
             }, {
-                text: "Florida"
+                text: "Virginia"
             }, {
-                text: "Arkansas"
+                text: "West Virginia"
             }
 
         ]
     }, {
         text: "West",
         nodes: [{
-                text: "Idaho"
-            }, {
                 text: "Alaska"
             }, {
-                text: "Montana"
-            }, {
-                text: "Washington"
-            }, {
-                text: "Wyoming"
-            }, {
-                text: "Oregon"
-            }, {
-                text: "Nevada"
+                text: "Arizona"
             }, {
                 text: "California"
             }, {
                 text: "Colorado"
             }, {
-                text: "Arizona"
+                text: "Idaho"
+            }, {
+                text: "Montana"
+            }, {
+                text: "Nevada"
             }, {
                 text: "New Mexico"
+            }, {
+                text: "Oregon"
+            }, {
+                text: "Washington"
+            }, {
+                text: "Wyoming"
             }
 
         ]
