@@ -218,8 +218,6 @@ def index():
     test = data_state_1999['Illinois']
     maxItem = max(test, key=lambda x:x['points'])
     minItem = min(test, key=lambda x:x['points'])
-    print(maxItem['points'])
-    print(minItem['points'])
     return render_template('base.html', temp=json.dumps(data_state_1999['Illinois']), max =maxItem['points'], min = minItem['points'])
 
 
@@ -228,14 +226,9 @@ def state_response():
     """
     :return: Returns a json object to the caller function that made the AJAX request
     """
-    print(request.json)
-    print(request.json['state'])
-    print(data_state_1999[request.json['state']])
     test = data_state_1999[request.json['state']]
     maxItem = max(test, key=lambda x:x['points'])
     minItem = min(test, key=lambda x:x['points'])
-    print(maxItem['points'])
-    print(minItem['points'])
     return jsonify(
             msg='YES', data = data_state_1999[request.json['state']], state = request.json['state'],max =maxItem['points'], min = minItem['points']
         )
@@ -246,26 +239,17 @@ def year_response():
 
     :return: Returns a json object to the caller function that made the AJAX request
     """
-    print(request.json)
-    print(request.json['state'])
-    print(request.json['year'])
     if request.json['year'] == 1999:
-        print(data_state_1999[request.json['state']])
         test = data_state_1999[request.json['state']]
         maxItem = max(test, key=lambda x:x['points'])
         minItem = min(test, key=lambda x:x['points'])
-        print(maxItem['points'])
-        print(minItem['points'])
         return jsonify(
             msg='YES', data = data_state_1999[request.json['state']], state = request.json['state'],max =maxItem['points'], min = minItem['points']
         )
     elif request.json['year'] == 2000:
-        print(data_state_2000[request.json['state']])
         test = data_state_2000[request.json['state']]
         maxItem = max(test, key=lambda x:x['points'])
         minItem = min(test, key=lambda x:x['points'])
-        print(maxItem['points'])
-        print(minItem['points'])
         return jsonify(
             msg='YES', data = data_state_2000[request.json['state']], state = request.json['state'],max =maxItem['points'], min = minItem['points']
         )
@@ -281,14 +265,14 @@ def exception_handler(error):
     return 'ERROR ' + repr(error)
 
 if __name__ == '__main__':
-    print(os.path.dirname(os.path.realpath(__file__)))
+    # print(os.path.dirname(os.path.realpath(__file__)))
     with open('static/res/countries.json') as data_file:
         data = json.loads(data_file.read())
     with open('static/res/result1999.json') as data_file:
         data_1999 = json.loads(data_file.read())
     with open('static/res/result2000.json') as data_file:
         data_2000 = json.loads(data_file.read())
-    pprint.pprint(data_2000)
+    # pprint.pprint(data_2000)
     del data_1999['1']
     del data_1999['13']
     del data_1999['18']
@@ -321,7 +305,7 @@ if __name__ == '__main__':
                             temp1 = {'name': info.name, 'alias': info.alpha3, 'points': value, 'continent':match['continent']}
                             new_dict.append(temp1)
         newlist = sorted(new_dict, key=lambda k: k['points'], reverse=True)
-        newlist = newlist[:50]
+        newlist = newlist[:80]
         data_state_1999[state] = newlist
 
     for state, val in data_2000.iteritems():
@@ -336,7 +320,7 @@ if __name__ == '__main__':
                             temp1 = {'name': info.name, 'alias': info.alpha3, 'points': value, 'continent':match['continent']}
                             new_dict.append(temp1)
         newlist = sorted(new_dict, key=lambda k: k['points'], reverse=True)
-        newlist = newlist[:50]
+        newlist = newlist[:80]
         data_state_2000[state] = newlist
 
     app.run()

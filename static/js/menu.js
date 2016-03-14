@@ -67,8 +67,6 @@ function menu() {
             }, {
                 text: "Tennessee"
             }, {
-                text: "District of Columbia"
-            }, {
                 text: "Mississippi"
             }, {
                 text: "Virginia"
@@ -111,8 +109,6 @@ function menu() {
                 text: "Nevada"
             }, {
                 text: "California"
-            }, {
-                text: "Utah	Hawaii"
             }, {
                 text: "Colorado"
             }, {
@@ -212,7 +208,7 @@ function init(temp, min_val, max_val) {
         countries = temp;
         //console.log(countries);
         console.log(min_val, max_val);
-        var pointScale = d3.scale.sqrt().domain([min_val, max_val]).range([0, 100]);
+        var pointScale = d3.scale.sqrt().domain([min_val, max_val]).range([0, 85]);
         console.log(pointScale);
         console.log("done with scale");
         nodes = []
