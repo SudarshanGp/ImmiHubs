@@ -1,1 +1,1 @@
-# ImmiHubs# ImmiHubs
+To run the file, run 'python view.py' on a python 2.7 interepretter. It be hosted on localhost.
