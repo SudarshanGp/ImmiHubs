@@ -8,6 +8,22 @@ body {
     /*background-image: url('../img/img.png');*/
     padding-top: 60px;
 }
+#info{
+    margin-top: 50px;
+        text-align: center;
+
+}
+
+#info span{
+
+    font-weight: 600;
+    font: 15px "Roboto Slab", Helvetica, Arial, sans-serif;
+}
+#map{
+    margin-top: 50px;
+}
+
+
 text {
   font: 12px "Roboto Slab", Helvetica, Arial, sans-serif;
   text-anchor: middle;

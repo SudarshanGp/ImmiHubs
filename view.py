@@ -218,6 +218,8 @@ def index():
     test = data_state_1999['Illinois']
     maxItem = max(test, key=lambda x:x['points'])
     minItem = min(test, key=lambda x:x['points'])
+    sum1 = sum(item['points'] for item in test)
+    print(sum1)
     return render_template('base.html', temp=json.dumps(data_state_1999['Illinois']), max =maxItem['points'], min = minItem['points'])
 
 
@@ -229,8 +231,10 @@ def state_response():
     test = data_state_1999[request.json['state']]
     maxItem = max(test, key=lambda x:x['points'])
     minItem = min(test, key=lambda x:x['points'])
+    sum1 = sum(item['points'] for item in test)
+    print(sum1)
     return jsonify(
-            msg='YES', data = data_state_1999[request.json['state']], state = request.json['state'],max =maxItem['points'], min = minItem['points']
+            msg='YES', data = data_state_1999[request.json['state']], state = request.json['state'],max =maxItem['points'], min = minItem['points'], total = sum1
         )
 
 @app.route('/year', methods=['GET', 'POST'])
@@ -243,15 +247,17 @@ def year_response():
         test = data_state_1999[request.json['state']]
         maxItem = max(test, key=lambda x:x['points'])
         minItem = min(test, key=lambda x:x['points'])
+        sum1 = sum(item['points'] for item in test)
         return jsonify(
-            msg='YES', data = data_state_1999[request.json['state']], state = request.json['state'],max =maxItem['points'], min = minItem['points']
+            msg='YES', data = data_state_1999[request.json['state']], state = request.json['state'],max =maxItem['points'], min = minItem['points'] , total = sum1
         )
     elif request.json['year'] == 2000:
         test = data_state_2000[request.json['state']]
         maxItem = max(test, key=lambda x:x['points'])
         minItem = min(test, key=lambda x:x['points'])
+        sum1 = sum(item['points'] for item in test)
         return jsonify(
-            msg='YES', data = data_state_2000[request.json['state']], state = request.json['state'],max =maxItem['points'], min = minItem['points']
+            msg='YES', data = data_state_2000[request.json['state']], state = request.json['state'],max =maxItem['points'], min = minItem['points'], total = sum1
         )
 
 

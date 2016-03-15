@@ -144,6 +144,7 @@ function menu() {
                             $('#slider3').empty();
                             started = false;
                             init(response['data'], response['min'], response['max']);
+                            $("#info span").text("Total Number of Immigrants : " + response['total']);
                         }
                     },
                     dataType: "json",
@@ -208,7 +209,7 @@ function init(temp, min_val, max_val) {
         countries = temp;
         //console.log(countries);
         console.log(min_val, max_val);
-        var pointScale = d3.scale.sqrt().domain([min_val, max_val]).range([0, 85]);
+        var pointScale = d3.scale.sqrt().domain([min_val, max_val]).range([0, 77]);
         console.log(pointScale);
         console.log("done with scale");
         nodes = []
@@ -363,9 +364,11 @@ function set_slider(){
                             console.log("YES");
                             console.log(response);
 
+
                             //$('#slider3').empty();
                             started = true;
                             init(response['data'], response['min'], response['max']);
+                            $("#info span").text("Total Number of Immigrants : " + response['total']);
                         }
                     },
                     dataType: "json",
