@@ -1,7 +1,0 @@
-Susan Jacob : Data Processing for multiple years of data from .tsv to .json
-
-Ishaan Kansal : Worked on parts of the CSS code and implementation suggestions
-
-Sudarshan Govindaprasad : Worked on implementing the visualization using Flask framework to make the d3 visualizations interactive
-
-Zubin Pahuja:  data processing for data
